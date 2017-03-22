@@ -1,11 +1,14 @@
-package org.formation.tpinterface.test;
+package presentation;
 
 
-import org.formation.tpinterface.AreaCalculator;
-import org.formation.tpinterface.Circle;
-import org.formation.tpinterface.Rectangle;
-import org.formation.tpinterface.Square;
-import org.formation.tpinterface.Surface;
+import java.util.ArrayList;
+import java.util.Collection;
+
+import metier.AreaCalculator;
+import metier.Circle;
+import metier.Rectangle;
+import metier.Square;
+import metier.Surface;
 
 public class MainTest {
 
@@ -16,11 +19,17 @@ public class MainTest {
 		Square s = new Square(8);
 		Circle c = new Circle(4);
 		
-		Surface[] sf = new Surface[3];
+		/*Surface[] sf = new Surface[3];
 		
 		sf[0] = r;
 		sf[1] = s;
 		sf[2] = c;
+		*/
+
+		Collection<Surface> sf = new ArrayList<Surface>();
+		sf.add(r);
+		sf.add(s);
+		sf.add(c);
 		
 		AreaCalculator ac = new AreaCalculator();
 		System.out.println(ac.sumArea(sf));

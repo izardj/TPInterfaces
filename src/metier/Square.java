@@ -1,4 +1,4 @@
-package org.formation.tpinterface;
+package metier;
 
 public class Square extends Rectangle {
 

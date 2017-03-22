@@ -1,4 +1,6 @@
-package org.formation.tpinterface;
+package metier;
+
+import java.util.Collection;
 
 public class AreaCalculator {
 
@@ -6,7 +8,7 @@ public class AreaCalculator {
 		super();
 	}
 
-	public double sumArea(Surface[] surfaces) {
+	public double sumArea(Collection<Surface> surfaces) {
 		double sumArea = 0;
 		for (Surface surface : surfaces) {
 			sumArea += surface.getArea();
